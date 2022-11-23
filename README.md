@@ -2,7 +2,7 @@
 
 #### Quickstart
 ```bash
-bundle && yarn
+ bundle && yarn
 
 # below kicks off the html creation into /src/spectaql
  yarn schema:doc
@@ -31,3 +31,6 @@ defaults:
 ```yml
 layout: "default"
 ```
+
+<img width="1256" alt="Screen Shot 2022-11-23 at 12 13 38 pm" src="https://user-images.githubusercontent.com/68096885/203451753-6c863377-1dec-40c5-a0fa-b891604fb605.png">
+
