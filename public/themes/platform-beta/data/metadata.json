@@ -1,0 +1,96 @@
+{
+  "OBJECT": {
+    "Customer": {
+      "documentation": {
+        "undocumented": true
+      }
+    },
+    "Channel": {
+      "group": "Channel",
+      "fields": {
+        "group": "Channel",
+        "status": {
+          "documentation": {
+            "example": "Metadata example of `nonRequiredField`"
+          }
+        },
+        "tokenType": {
+          "documentation": {
+            "example": "metadata overwrite for Channel"
+          }
+        }
+      }
+    },
+    "Query": {
+      "fields": {
+        "channel": {
+          "group": "Channel",
+          "args": {
+            "nonReqQueryArg": {
+              "documentation": {
+                "example": "Metadata example of `nonReqQueryArg`"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SCALAR": {
+    "DateTime": {
+      "documentation": {
+        "example": "2016-10-07T01:08:03.420Z"
+      }
+    }
+  },
+  "INPUT_OBJECT": {
+    "FilterInput": {
+      "inputFields": {
+        "someField": {
+          "documentation": {
+            "example": true
+          }
+        },
+        "anotherField": {
+          "documentation": {
+            "example": "Metadata example of `anotherField`"
+          }
+        },
+        "episodeEnums": {
+          "documentation": {
+            "example": [
+              "EMPIRE"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ENUM": {
+    "EpisodeEnum": {
+      "enumValues": {
+        "EMPIRE": {
+          "documentation": {
+            "undocumented": true
+          }
+        }
+      }
+    }
+  },
+  "INTERFACE": {
+    "MyInterface": {
+      "fields": {
+        "id": {
+          "documentation": {
+            "example": "exampleFromMetadataJson"
+          }
+        },
+        "name": {
+          "documentation": {
+            "undocumented": true
+          }
+        }
+      }
+    }
+  }
+}

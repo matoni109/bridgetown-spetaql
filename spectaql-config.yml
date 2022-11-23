@@ -1,0 +1,79 @@
+# https://github.com/anvilco/spectaql/blob/main/config-example.yml
+spectaql:
+  logoFile: public/images/submarine-dark-clear.png
+  faviconFile: public/images/favicon.ico
+  # themeDir: public/themes/my-partial-theme
+  themeDir: public/themes/platform-beta
+  displayAllServers: true
+
+introspection:
+  # url: http://localhost:4000/
+  schemaFile: public/themes/platform-beta/data/platform-gateway-sample.graphql
+  metadataFile: public/themes/platform-beta/data/metadata.json
+  fieldExpansionDepth: 2
+  queriesDocumentedDefault: true
+  queryDocumentedDefault: true
+  queryArgDocumentedDefault: true
+  hideQueriesWithUndocumentedReturnType: true
+  mutationsDocumentedDefault: true
+  mutationDocumentedDefault: true
+  mutationArgDocumentedDefault: true
+  hideMutationsWithUndocumentedReturnType: true
+  objectsDocumentedDefault: true
+  objectDocumentedDefault: true
+  fieldDocumentedDefault: true
+  argDocumentedDefault: true
+  hideFieldsOfUndocumentedType: true
+  queryNameStrategy: none # capitalizeFirst
+  headers:
+    Authorization: 'apikey REPLACE_WITH_YOUR_API_KEY'
+
+  spectaqlDirective:
+    enable: true
+
+extensions:
+  graphqlScalarExamples: true
+
+info:
+  x-hideIntroduction: false
+  x-hideWelcome: false
+  x-hideIntroItems: false
+  x-hideIsDeprecated: false
+  x-hideDeprecationReason: false
+  logoFile: public/images/submarine-dark-clear.png
+  faviconFile: public/images/favicon.ico
+  title: GraphQL API Reference
+  description: <p>Welcome to the Submarine Platform GraphQL API reference. This reference includes the complete set of GraphQL types, queries, mutations, and their parameters for interacting with the Submarine eco-system.</p><p>For more general Submarine platform documentation, please check out our <a href="https://hub.getsubmarine.com/docs/platform-overview" target="_blank">platform overview</a>.</p><p>Learn how to authenticate to the API in the <a href="#" target="_blank">Getting Started guide</a>.</p><p>Platform help desk∶ <a href="https://help.discolabs.com/portal/sign_in" target="_blank">https://help.discolabs.com/portal/sign_in</a></p><p>Platform API Status∶ <a href="https://status.getsubmarine.com/" target="_blank">https://status.getsubmarine.com</a></p>
+  version: 1.0.0
+  termsOfService: https://www.example.com/terms
+  contact:
+    name: API Support
+    url: https://hub.getsubmarine.com/
+    email: hello@discolabs.com
+  # license:
+  #   name: Apache 2.0
+  #   url: https://www.apache.org/licenses/LICENSE-2.0.html
+  # A non-standard array of items to display in your Introduction Area
+  x-introItems:
+    # Can be a Title (for the Nav panel) + URL to simply add a link to somewhere
+    # - title: Get Submarine main page
+    #  url: https://www.getsubmarine.com/
+    # Can be a Title (for the Nav panel) + description (for the Content panel)
+    # - title: Important thing 1
+    #   description: Some important stuff we wanted you to know. Supports `markdown`
+    # Can be a Title (for the Nav panel) + file that gets loaded (for the Content panel)
+    # - title: Content from file that supports markdown
+    #   file: public/themes/platform-beta/data/intro-items-markdown.md
+  x-hidePoweredBy: false
+  x-url: https://api.getsubmarine.com/graphql
+
+servers:
+  - url: https://platform-gateway-staging.discolabs.com/graphql
+    description: Staging
+  - url: https://api.getsubmarine.com/graphql
+    description: Production
+    production: true
+    headers:
+      - name: Authorization
+        example: Bearer <YOUR_PLATFORM_TOKEN_HERE>
+        comment: You will need your API Token, these are environment specific
